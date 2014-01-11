@@ -1,7 +1,6 @@
+#include "local.h"
 
-#include "player.h"
-
-void Player::event(SDL_Event event)
+void Local::event(SDL_Event event)
 {
   double vX, vY;
   Rectangle r;

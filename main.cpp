@@ -9,7 +9,8 @@
 #include "timer.h"
 #include "rectangle.h"
 #include "sprite.h"
-#include "player.h"
+#include "character.h"
+#include "local.h"
 
 
 SDL_Surface* screen;
@@ -19,7 +20,7 @@ int main(int argc, char* args[])
 {
   bool quit;
   if (init(480, 640, 32))
-    return 0;
+    return 1;
 
   Timer delta;
 
@@ -27,8 +28,9 @@ int main(int argc, char* args[])
   Sprite sprite(rect);
   sprite.surface = load_image("Block.bmp", true, 255, 255, 255);
 
-  Player player(rect);
+  Local player(rect);
   player.surface = load_image("Block.bmp", true, 255, 255, 255);
+
 
   delta.start();
 
@@ -40,7 +42,6 @@ int main(int argc, char* args[])
       {
         quit = true;
       }
-
       player.event(event);
 
     }
@@ -57,7 +58,6 @@ int main(int argc, char* args[])
     draw_rect(0, 0, 640, 480, 255, 255, 255, screen);
     sprite.draw();
     player.draw();
-
 
     SDL_Flip(screen);
 

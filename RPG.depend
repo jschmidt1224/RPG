@@ -50,3 +50,54 @@
 1388555257 c:\users\jason\documents\rpg\player.h
 	"sprite.h"
 
+1389480280 source:c:\users\jason\documents\github\rpg\main.cpp
+	<math.h>
+	<fstream>
+	<string>
+	<sstream>
+	"SDL/SDL.h"
+	"SDL/SDL_ttf.h"
+	"SDL/SDL_image.h"
+	"init.h"
+	"timer.h"
+	"rectangle.h"
+	"sprite.h"
+	"character.h"
+	"local.h"
+
+1388385834 c:\users\jason\documents\github\rpg\init.h
+	"SDL/SDL.h"
+	"SDL/SDL_ttf.h"
+	"SDL/SDL_image.h"
+	"Rectangle.h"
+
+1388299933 c:\users\jason\documents\github\rpg\rectangle.h
+
+1388384911 c:\users\jason\documents\github\rpg\timer.h
+	"SDL/SDL.h"
+
+1388554613 c:\users\jason\documents\github\rpg\sprite.h
+	"SDL/SDL.h"
+	"rectangle.h"
+
+1389476767 c:\users\jason\documents\github\rpg\player.h
+	"sprite.h"
+
+1389476271 source:c:\users\jason\documents\github\rpg\player.cpp
+	"player.h"
+
+1388385447 source:c:\users\jason\documents\github\rpg\sprite.cpp
+	"sprite.h"
+
+1388384911 source:c:\users\jason\documents\github\rpg\timer.cpp
+	"timer.h"
+
+1389476822 c:\users\jason\documents\github\rpg\character.h
+	"sprite.h"
+
+1389480177 source:c:\users\jason\documents\github\rpg\local.cpp
+	"local.h"
+
+1389480209 c:\users\jason\documents\github\rpg\local.h
+	"character.h"
+
