@@ -17,7 +17,8 @@ class Character : public Sprite
 
   public:
   Character() : Sprite(){};
-  Character(Rectangle r) : Sprite(r){};
+  Character(Rect r) : Sprite(r){};
+  void step(int);
 };
 
 

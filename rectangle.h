@@ -1,9 +1,9 @@
 
 
-#ifndef RECTANGLE_H
-#define RECTANGLE_H
+#ifndef Rect_H
+#define Rect_H
 
-struct Rectangle
+struct Rect
 {
   double x, y, w, h;
 };

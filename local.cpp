@@ -3,7 +3,7 @@
 void Local::event(SDL_Event event)
 {
   double vX, vY;
-  Rectangle r;
+  Rect r;
   if(event.type == SDL_KEYDOWN)
   {
     switch(event.key.keysym.sym)

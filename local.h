@@ -17,7 +17,7 @@ class Local : public Character
 
   public:
   Local() : Character(){keys = 0;};
-  Local(Rectangle r) : Character(r){keys = 0;};
+  Local(Rect r) : Character(r){keys = 0;};
   void event(SDL_Event);
   char keys;
 };

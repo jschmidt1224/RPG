@@ -2,7 +2,7 @@
 #include "sprite.h"
 
 extern SDL_Surface* screen;
-extern void draw_surface(Rectangle, SDL_Surface*, SDL_Surface*);
+extern void draw_surface(Rect, SDL_Surface*, SDL_Surface*);
 
 Sprite::Sprite()
 {
@@ -17,7 +17,7 @@ Sprite::Sprite()
   surface = NULL;
 }
 
-Sprite::Sprite(Rectangle position)
+Sprite::Sprite(Rect position)
 {
   position_.x = position.x;
   position_.y = position.y;
@@ -30,7 +30,7 @@ Sprite::Sprite(Rectangle position)
   surface = NULL;
 }
 
-char Sprite::collision_check(Sprite sprite, Rectangle offset)
+char Sprite::collision_check(Sprite sprite, Rect offset)
 {
   float aT, bT, aB, bB, aR, bR, aL, bL;
   char ret;
@@ -74,22 +74,22 @@ void Sprite::step(int time)
   position_.y += speed_.y * (time / 1000.0f);
 }
 
-Rectangle Sprite::get_position()
+Rect Sprite::get_position()
 {
   return position_;
 }
 
-Rectangle Sprite::get_speed()
+Rect Sprite::get_speed()
 {
   return speed_;
 }
 
-Rectangle Sprite::get_previous()
+Rect Sprite::get_previous()
 {
   return previous_;
 }
 
-void Sprite::set_position(Rectangle position)
+void Sprite::set_position(Rect position)
 {
   position_.x = position.x;
   position_.y = position.y;
@@ -97,7 +97,7 @@ void Sprite::set_position(Rectangle position)
   position_.h = position.h;
 }
 
-void Sprite::set_speed(Rectangle speed)
+void Sprite::set_speed(Rect speed)
 {
   speed_.x = speed.x;
   speed_.y = speed.y;

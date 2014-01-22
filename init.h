@@ -42,7 +42,7 @@ SDL_Surface* load_image(std::string filename, bool trans = false, int r = 0, int
     return optimized;
 }
 
-void draw_surface(Rectangle X, SDL_Surface* source, SDL_Surface* destination)
+void draw_surface(Rect X, SDL_Surface* source, SDL_Surface* destination)
 {
     SDL_Rect offset; //creates and set values for offset
     offset.x = (int)round(X.x);

@@ -7,10 +7,12 @@
 #include "SDL/SDL_image.h"
 #include "init.h"
 #include "timer.h"
-#include "rectangle.h"
+#include "Rectangle.h"
 #include "sprite.h"
 #include "character.h"
 #include "local.h"
+#include "socket.h"
+
 
 
 SDL_Surface* screen;
@@ -23,8 +25,9 @@ int main(int argc, char* args[])
     return 1;
 
   Timer delta;
+  Socket sock;
 
-  Rectangle rect = {50, 50, 32, 32};
+  Rect rect = {50, 50, 32, 32};
   Sprite sprite(rect);
   sprite.surface = load_image("Block.bmp", true, 255, 255, 255);
 
