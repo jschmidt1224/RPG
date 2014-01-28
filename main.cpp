@@ -26,6 +26,24 @@ int main(int argc, char* args[])
 
   Timer delta;
   Socket sock;
+  WSADATA wsaData;
+  struct sockaddr_in serverAddr;
+  memset(&serverAddr, 0, sizeof(serverAddr));
+  serverAddr.sin_family = AF_INET;
+  serverAddr.sin_addr.s_addr = inet_addr("10.18.201.218");
+  serverAddr.sin_port = htons(12345);
+  if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
+  {
+    exit(1);
+  }
+
+  if(sock.bindSocket(0) < 0)
+  {
+    exit(WSAGetLastError());
+  }
+
+  sock.sendMessage(&serverAddr, "RPGCJason");
+
 
   Rect rect = {50, 50, 32, 32};
   Sprite sprite(rect);
@@ -63,7 +81,7 @@ int main(int argc, char* args[])
     player.draw();
 
     SDL_Flip(screen);
-
+    //SDL_Delay(10);
   }
 
   return 0;
